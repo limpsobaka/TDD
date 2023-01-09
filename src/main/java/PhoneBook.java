@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
@@ -31,5 +32,9 @@ public class PhoneBook {
 
   public String findByName(String name) {
     return PHONEBOOK.get(name);
+  }
+
+  public ArrayList<String> printAllNames() {
+    return null;
   }
 }
