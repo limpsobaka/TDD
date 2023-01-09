@@ -1,5 +1,6 @@
 import java.util.SortedMap;
 import java.util.TreeMap;
+import java.util.stream.Stream;
 
 public class PhoneBook {
   private static PhoneBook INSTANCE;
@@ -23,6 +24,9 @@ public class PhoneBook {
   }
 
   public String findByNumber(String number) {
+    if (PHONEBOOK.containsValue(number)) {
+      return PHONEBOOK.entrySet().stream().filter(x -> x.getValue().contains(number)).findFirst().get().getKey();
+    }
     return null;
   }
 }

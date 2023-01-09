@@ -37,6 +37,9 @@ public class PhoneBookTest {
     //assert
     String expected = "Petya";
     String result;
+    phoneBook.add("Petya", "79102356789");
+    phoneBook.add("Petya", "79252356782");
+    phoneBook.add("Vasya", "79102356489");
 
     //act
     result = phoneBook.findByNumber( "79102356789");
