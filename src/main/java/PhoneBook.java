@@ -1,6 +1,5 @@
 import java.util.SortedMap;
 import java.util.TreeMap;
-import java.util.stream.Stream;
 
 public class PhoneBook {
   private static PhoneBook INSTANCE;
@@ -31,6 +30,6 @@ public class PhoneBook {
   }
 
   public String findByName(String name) {
-    return null;
+    return PHONEBOOK.get(name);
   }
 }
