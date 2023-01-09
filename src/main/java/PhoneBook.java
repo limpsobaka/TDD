@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.SortedMap;
-import java.util.TreeMap;
+import java.util.*;
 
 public class PhoneBook {
   private static PhoneBook INSTANCE;
@@ -34,7 +32,8 @@ public class PhoneBook {
     return PHONEBOOK.get(name);
   }
 
-  public ArrayList<String> printAllNames() {
-    return null;
+  public List<String> printAllNames() {
+    List<String> result = new ArrayList<>(PHONEBOOK.keySet());
+    return result;
   }
 }
